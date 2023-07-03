@@ -9,3 +9,5 @@ var jsonParser = bodyParser.json();
 router.post("/", jsonParser, function(req, res){
 
 });
+
+module.exports = router;
