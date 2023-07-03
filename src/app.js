@@ -18,11 +18,17 @@ const app = express();
 
 app.use(bodyParser.urlencoded({extended: false}));
 
-const authenticationRoute = require("./api/routes/authenticationroute");
+const authenticationRoute = require("./api/routes/authentication_route");
 app.use("/api/v1/auth", authenticationRoute);
 
-const expenseRoute = require("./api/routes/expenseroute");
+const expenseRoute = require("./api/routes/expense_route");
 app.use("/api/v1/expense", expenseRoute);
+
+const budgetRoute = require("./api/routes/budget_route");
+app.use("/api/v1/budget");
+
+const categoryRoute = require("./api/routes/category_route");
+app.use("/api/v1/route");
 
 const server = app.listen(3000, function(){
     console.log("Server started at port : ")
