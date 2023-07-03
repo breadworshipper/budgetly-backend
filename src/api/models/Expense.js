@@ -2,7 +2,8 @@ const mongoose = require("mongoose");
 
 var expenseSchema = new mongoose.Schema(
     {
-        date: Date,
+        date: {type: Date, default: Date.now},
+        category: {type: mongoose.Schema.Types.ObjectId, ref: "Category"},
         amount: Number,
         note: String
     }
