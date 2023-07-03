@@ -1,9 +1,8 @@
 const mongoose = require("mongoose");
-const userObject = require("./User");
 
 var categorySchema = new mongoose.Schema(
     {   
-        owner : userObject,
+        owner : {type: mongoose.Schema.Types.ObjectId, ref: "User"},
         name : String
     }
 );
