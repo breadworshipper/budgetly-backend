@@ -1,11 +1,15 @@
 const mongoose = require("mongoose");
-const userObject = require("./User");
+
+/*
+How to query : 
+https://stackoverflow.com/questions/18001478/referencing-another-schema-in-mongoose
+*/
 
 var budgetSchema = new mongoose.Schema(
     {   
-        owner : userObject,
+        owner : {type: mongoose.Schema.Types.ObjectId, ref: "User"},
         name : String, 
-        spending : Number,
+        currentSpending : Number,
         target : Number   
     }
 );
