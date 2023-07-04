@@ -6,7 +6,11 @@ const bodyParser = require("body-parser");
 var jsonParser = bodyParser.json();
 
 // TODO
-router.post("/", jsonParser, function(req, res){
+router.post("/register", jsonParser, function(req, res){
+
+});
+
+router.post("/login", jsonParser, function(req, res){
 
 });
 
