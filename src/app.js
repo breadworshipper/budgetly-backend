@@ -46,8 +46,7 @@ const categoryRoute = require("./api/routes/category_route");
 app.use("/api/v1/route", categoryRoute);
 
 const server = app.listen(3000, function(){
-    console.log("Server started at port : ")
-    console.log(server.address.port);
+    console.log("Server is running.")
 });
 
 module.exports = app;
