@@ -22,8 +22,8 @@ const app = express();
 
 app.use(session({
     secret: process.env.SECRET,
-    resave: false, 
-    saveUninitialized: false
+    resave: false, // For every request create a new session set to false
+    saveUninitialized: false 
 }));
 app.use(passport.initialize());
 app.use(passport.session());
